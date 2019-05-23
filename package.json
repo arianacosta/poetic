@@ -1,0 +1,25 @@
+{
+  "name": "js-code-style",
+  "version": "0.0.1",
+  "description": "Code style guide, linters and formatters for JavaScript, TypeScript and React.",
+  "main": "config/index.js",
+  "repository": "git@github.com:arianacosta/js-code-style.git",
+  "homepage": "https://github.com/arianacosta/js-code-style",
+  "license": "MIT",
+  "scripts": {
+    "project:upgrade:dependencies": "yarn upgrade-interactive --latest"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.11.0",
+    "prettier": "^1.17.1",
+    "typescript": "^3.4.5"
+  }
+}

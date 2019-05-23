@@ -1,0 +1,8 @@
+{
+  "extends": "./node_modules/js-code-style/config/typescript/tsconfig",
+  // Add custom configuration here
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "outDir": "dist"
+  }
+}
