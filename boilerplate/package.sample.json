@@ -1,9 +1,9 @@
 {
-  "dependencies": {
+  "devDependencies": {
     "js-code-style": "../js-code-style"
   },
   "scripts": {
-    "clean": "yarn code:lint && yarn code:format",
+    "code:clean": "yarn code:lint && yarn code:format",
     "code:lint": "eslint \"src/**\" --fix",
     "code:format": "prettier \"src/**\" --write",
     "code:check:rules": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"

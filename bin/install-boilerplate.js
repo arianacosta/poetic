@@ -71,9 +71,9 @@ package.scripts = {
   ...packageScripts.scripts,
 };
 
-package.dependencies = {
-  ...package.dependencies,
-  ...packageScripts.dependencies,
+package.devDependencies = {
+  ...package.devDependencies,
+  ...packageScripts.devDependencies,
 };
 
 fse.writeJsonSync(packageJson, package, {spaces: 2});
