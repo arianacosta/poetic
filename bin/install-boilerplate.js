@@ -8,11 +8,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-"use strict";
-
-const fs = require("fs");
+const fse = require("fs-extra");
 const path = require("path");
 const cp = require("child_process");
+
+const currentDir = process.cwd();
+const sourceRootDir = path.join(__dirname, "..");
 
 const cleanup = () => {
   console.log("Cleaning up.");
@@ -36,6 +37,11 @@ const handleError = e => {
   process.exit(1);
 };
 
+const installFiles = () => {
+  const source = path.join(sourceRootDir, 'boilerplate');
+  fse.copySync(source, currentDir);
+}
+
 process.on("SIGINT", handleExit);
 process.on("uncaughtException", handleError);
 
@@ -50,29 +56,31 @@ process.on("uncaughtException", handleError);
 //   process.exit(1);
 // }
 
-const rootDir = path.join(__dirname, "..");
-const packageJson = path.join(rootDir, "package.json");
+const packageJson = path.join(currentDir, "package.json");
 
-if (!fs.existsSync(packageJson)) {
+if (!fse.existsSync(packageJson)) {
   console.log('Error: package.json not found.');
   process.exit(1);
 }
 
-const json = JSON.parse(fs.readFileSync(packageJson, "utf8"));
+const package = fse.readJsonSync(packageJson);
+const packageScripts = fse.readJsonSync(path.join(sourceRootDir, 'boilerplate/package.sample.json'));
 
-if (!json.devDependencies) {
-  json.devDependencies = {};
-}
+package.scripts = {
+  ...package.scripts,
+  ...packageScripts.scripts,
+};
 
-json.devDependencies['cowsay'] = "^1.0.1";
+package.dependencies = {
+  ...package.dependencies,
+  ...packageScripts.dependencies,
+};
 
-fs.writeFileSync(packageJson, JSON.stringify(json, null, 2), "utf8");
-console.log(
-  "Added js-code-style to package.json"
-);
+fse.writeJsonSync(packageJson, package, {spaces: 2});
 
-// Now that we have packed them, call the global CLI.
-cp.execSync("yarn install");
+installFiles();
+
+cp.execSync('yarn install');
 
 console.log('---');
 process.exit(0);
@@ -84,7 +92,7 @@ const craScriptPath = path.join(packagesDir, "create-react-app", "index.js");
 cp.execSync(
   `node ${craScriptPath} ${args.join(" ")} --scripts-version="${scriptsPath}"`,
   {
-    cwd: rootDir,
+    cwd: sourceRootDir,
     stdio: "inherit"
   }
 );
