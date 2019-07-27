@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Code style guide, linters and formatters for JavaScript, TypeScript and React.",
   "main": "config/index.js",
-  "bin": "bin/index.js",
+  "bin": "bin/install-boilerplate.js",
   "repository": "git@github.com:arianacosta/js-code-style.git",
   "homepage": "https://github.com/arianacosta/js-code-style",
   "license": "MIT",
