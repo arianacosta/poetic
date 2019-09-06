@@ -1,27 +1,41 @@
 {
   "name": "poetic",
   "version": "0.0.1",
-  "description": "Automatically install and maintain code style with linters and formatters for JavaScript, TypeScript and React.",
+  "description": "Automatically install and maintain your code style with linters and formatters for JavaScript, TypeScript and React.",
   "main": "config/index.js",
   "bin": "bin/install-boilerplate.js",
   "repository": "git@github.com:arianacosta/poetic.git",
   "homepage": "https://github.com/arianacosta/poetic",
+  "author": "Arian Acosta (https://twitter.com/arian3k)",
   "license": "MIT",
   "scripts": {
-    "project:upgrade:dependencies": "yarn upgrade-interactive --latest"
+    "upgrade:dependencies": "npx npm-check-updates"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.13.0",
-    "@typescript-eslint/parser": "^1.13.0",
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb": "17.1.1",
-    "eslint-config-prettier": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.1.0",
+    "@typescript-eslint/parser": "^2.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.2.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "fs-extra": "^8.1.0",
     "prettier": "^1.18.2",
-    "typescript": "^3.5.3"
-  }
+    "typescript": "^3.6.2"
+  },
+  "keywords": [
+    "poetic",
+    "style",
+    "linter",
+    "formatter",
+    "eslint",
+    "tslint",
+    "javascript",
+    "typescript",
+    "prettier",
+    "airbnb"
+  ]
 }
