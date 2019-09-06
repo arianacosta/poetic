@@ -1,11 +1,12 @@
-# js-code-style
+# Poetic
 
-Code style guide, linters and formatters for JavaScript, TypeScript and React.
+Automatically configure and maintain code style rules with linters and formatters for JavaScript, TypeScript and React.
 
-    - Recommended Plugins:
-        - ESLint
-        - Prettier
-        - EditorConfig
+### Recommended Visual Studio Code Extensions
+        
+    - ESLint
+    - Prettier
+    - EditorConfig
 
 ### ToDo
 
@@ -22,8 +23,3 @@ Looking for contributors to:
 - Add instructions for contributing (flow)
 - Maybe make a cool logo?
 - Add configs for webstorm?
-
-js-code
-elegantcode
-fancycode
-poetic

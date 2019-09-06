@@ -1,11 +1,11 @@
 {
-  "name": "js-code-style",
+  "name": "poetic",
   "version": "0.0.1",
-  "description": "Code style guide, linters and formatters for JavaScript, TypeScript and React.",
+  "description": "Automatically install and maintain code style with linters and formatters for JavaScript, TypeScript and React.",
   "main": "config/index.js",
   "bin": "bin/install-boilerplate.js",
-  "repository": "git@github.com:arianacosta/js-code-style.git",
-  "homepage": "https://github.com/arianacosta/js-code-style",
+  "repository": "git@github.com:arianacosta/poetic.git",
+  "homepage": "https://github.com/arianacosta/poetic",
   "license": "MIT",
   "scripts": {
     "project:upgrade:dependencies": "yarn upgrade-interactive --latest"

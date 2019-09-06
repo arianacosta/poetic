@@ -1,4 +1,4 @@
-const { prettierrc } = require("js-code-style");
+const { prettierrc } = require("poetic");
 
 module.exports = {
   ...prettierrc
