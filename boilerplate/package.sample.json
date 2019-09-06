@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "js-code-style": "../js-code-style"
+    "poetic": "../poetic"
   },
   "scripts": {
     "code:clean": "yarn code:lint && yarn code:format",
