@@ -15,7 +15,7 @@ Poetic installs and maintains ESLint, Prettier, EditorConfig and Airbnb rules fo
 
 <p align="center">
   <img alt="Poetic installation example" src="https://user-images.githubusercontent.com/13475001/64479604-7bd72c00-d187-11e9-983a-a5fe0f7a9ec3.gif" 
-  width="400"
+  width="600"
   >
 </p>
 
