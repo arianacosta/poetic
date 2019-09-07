@@ -45,7 +45,7 @@ const updatePackageJson = () => {
     }
 
     const package = fse.readJsonSync(packageJson);
-    const packageScripts = fse.readJsonSync(path.join(sourceRootDir, 'boilerplate/package.sample.json'));
+    const packageScripts = fse.readJsonSync(path.join(sourceRootDir, 'bin/package.boilerplate.json'));
 
     package.scripts = {
       ...package.scripts,
