@@ -1,12 +1,23 @@
 <p align="center">
-  <img alt="Lerna" src="https://user-images.githubusercontent.com/13475001/64478843-6dcfde00-d17c-11e9-98a5-a2eabdc40c1c.png" height="75">
+  <img alt="Lerna" src="https://user-images.githubusercontent.com/13475001/64478843-6dcfde00-d17c-11e9-98a5-a2eabdc40c1c.png" width="200">
 </p>
 
 <p align="center">
   Automatic code styling for JavaScript, TypeScript and React.
 </p>
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/poetic"><img alt="NPM Status" src="https://img.shields.io/npm/v/poetic"></a>
+  <a href="https://github.com/arianacosta/poetic"><img alt="Code Size" src="https://img.shields.io/github/languages/code-size/arianacosta/poetic"></a>
+</p>
+
 Poetic installs and maintains ESLint, Prettier, EditorConfig and Airbnb rules for JavaScript, TypeScript and React.
+
+<p align="center">
+  <img alt="Poetic installation example" src="https://user-images.githubusercontent.com/13475001/64479604-7bd72c00-d187-11e9-983a-a5fe0f7a9ec3.gif" 
+  width="400"
+  >
+</p>
 
 ## Install
 

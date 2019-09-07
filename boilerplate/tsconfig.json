@@ -1,7 +1,7 @@
 {
-  // Poetic base configuration
+  /* Poetic base configuration */
   "extends": "./node_modules/poetic/config/typescript/tsconfig.json",
-  // Add your custom configuration after this
+  /* Add your custom configuration after this */
   "target": "es5",
   "include": ["src/**/*"],
   "compilerOptions": {
