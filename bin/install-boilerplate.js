@@ -72,12 +72,22 @@ const installPackages = () => {
     }
 }
 
+const displaySuccessMessage = () => {
+  console.log('');
+  console.log('💫 Poetic was installed successfully!');
+  console.log('   It is recommended to add these plugins to your IDE:');
+  console.log('   🔹 ESLint');
+  console.log('   🔹 Prettier');
+  console.log('   🔹 EditorConfig');
+}
+
 (() => {
   try {
     setCheckpoint();
     installConfigurationFiles();
     updatePackageJson();
     installPackages();
+    displaySuccessMessage();
   } catch (e) {
     console.error(e.message);
     resetChanges();
