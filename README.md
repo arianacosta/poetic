@@ -1,6 +1,12 @@
-# Poetic
+<p align="center">
+  <img alt="Lerna" src="https://user-images.githubusercontent.com/13475001/64478843-6dcfde00-d17c-11e9-98a5-a2eabdc40c1c.png" height="75">
+</p>
 
-Automatically configure and maintain linters and formatters with a curated set of extensible rules for JavaScript, TypeScript and React.
+<p align="center">
+  Automatic code styling for JavaScript, TypeScript and React.
+</p>
+
+Poetic installs and maintains ESLint, Prettier, EditorConfig and Airbnb rules for JavaScript, TypeScript and React.
 
 ## Install
 
@@ -10,21 +16,34 @@ On the root of your project run:
 npx poetic
 ```
 
-> Trying out Poetic is safe! You can review all the changes in Git before committing. And if you don't like it, just discard them.
+> Trying out Poetic is safe! You can review all the changes in Git before committing. If you don't like it, just discard it.
 
 ## Features
 
-- Installs and configures ESLint, Prettier and EditorConfig
-- Provides a curated set of rules based on Airbnb and ESLint Recommended
-- Customizable project configurations that are shareable
-- Easy to maintain with a single dependency
-- Configures Visual Studio Code
+- Installs and configures **ESLint**, **Prettier** and **EditorConfig**
+- Provides a curated set of rules based on **Airbnb** and **ESLint Recommended**
+- **Customizable project configurations** that are shareable
+- Easy to maintain with a **single dependency**
+- Configures **Visual Studio Code**
+
+### Motivation
+
+Keeping the code clean and organized is important to prevent bugs and to collaborate with others. Linters help identify possible errors and bad practices and formatters allow us to concentrate on the features without having to worry about the code format. Unfortunately, configuring and maintaining these tools is cumbersome and more often than not, the project ends up with incorrect configurations (if any at all).
+
+> The goal of Poetic is to simplify the setup and maintenance of code styling tools and rules while allowing full customization. 
 
 ## Supported File Types
 
 - Javascript (`.js`)
 - TypeScript (`.ts`)
 - React (`.js`,`.jsx`)
+
+```
+your-app/
+├── package.json
+└── src/
+    └── [your source files]
+```
 
 > Poetic checks the code inside the `src/` directory by default. This can be changed in the `package.json`
 
@@ -46,9 +65,9 @@ Poetic provides a few handy NPM scripts that are useful for applying the code st
 
 > You may use these in conjunction with [Husky](https://github.com/typicode/husky) to clean the code automatically before committing or pushing.
 
-## Customizing for your needs
+## Customizing for your project
 
-Poetic provides a well maintained and curated base configuration that can be easily extended or overriden. It uses the native configurations you are familiar with, so that you can build your own rules on top of it. Feel free to edit the following files as you see fit:
+Poetic provides a base configuration that can be easily extended or overridden. It uses the native configurations you are familiar with, so that you can build your own rules on top of it. Feel free to edit the following files as you see fit:
 
 - ESLint: 
   - `.eslintrc.js` (Linting rules)
@@ -69,11 +88,13 @@ It is strongly recommended to remove other versions of ESLint and Prettier prior
 
 If your project has custom rules or configurations, those can be easily copied over to the files added by Poetic. The filename convention is the same, so it should be straight forward.
 
+> Plese note that existing configuration files might be modified. Make sure to review all changes before committing.
+
 ## Contributing
 
 We are looking for contributors that are passionate about code style and making it accessible to teams around the world. 
 
-In order to make Poetic useful for everyone, we need to understand your needs, so please let us know about things that could help you improve your workflow.
+To make Poetic useful for everyone, we need to understand your needs, so please let us know about things that could help you improve your workflow.
 
 If you would like to submit a PR, these are some of the short-term goals, but feel free to improve other areas as well:
 
