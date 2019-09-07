@@ -21,5 +21,9 @@ module.exports = {
         extensions: [".js", ".jsx", ".ts", ".tsx"]
       }
     }
+  },
+  rules: {
+    quotes: ["warn", "single", { "allowTemplateLiterals": true }],
+    "no-unexpected-multiline": "error", // https://medium.com/@eugenkiss/dont-use-semicolons-in-typescript-474ccfe4bdb3
   }
 };

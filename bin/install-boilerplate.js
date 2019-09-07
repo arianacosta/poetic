@@ -17,7 +17,7 @@ const setCheckpoint = () => {
   const gitStatus = cp.execSync('git status --porcelain').toString();
 
   if (gitStatus.trim() !== '') {
-    console.error('🙈 There are uncommited changes. Please, commit before running this script.');
+    console.error('🙈 There are uncommited changes. Please, commit before installing Poetic.');
     process.exit(1);
   }
 
