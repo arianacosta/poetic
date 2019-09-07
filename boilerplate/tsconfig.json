@@ -1,7 +1,7 @@
 {
-  // Base code style rules
-  "extends": "./node_modules/poetic/config/typescript/tsconfig",
-  // Add your custom configuration overrides after this
+  // Poetic base configuration
+  "extends": "./node_modules/poetic/config/typescript/tsconfig.json",
+  // Add your custom configuration after this
   "target": "es5",
   "include": ["src/**/*"],
   "compilerOptions": {

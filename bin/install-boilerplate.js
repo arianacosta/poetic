@@ -17,7 +17,7 @@ const setCheckpoint = () => {
   const gitStatus = cp.execSync('git status --porcelain').toString();
 
   if (gitStatus.trim() !== '') {
-    console.error('🙈 There are uncommited changes. Please, commit before running this script.');
+    console.error('🙈 There are uncommited changes. Please, commit before installing Poetic.');
     process.exit(1);
   }
 
@@ -45,7 +45,7 @@ const updatePackageJson = () => {
     }
 
     const package = fse.readJsonSync(packageJson);
-    const packageScripts = fse.readJsonSync(path.join(sourceRootDir, 'boilerplate/package.sample.json'));
+    const packageScripts = fse.readJsonSync(path.join(sourceRootDir, 'bin/package.boilerplate.json'));
 
     package.scripts = {
       ...package.scripts,
