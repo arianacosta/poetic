@@ -116,7 +116,7 @@ If you would like to submit a PR, these are some of the short-term goals, but fe
 
 #### Contacting Collaborators
 
-- Arian Acosta [Twitter](https://twitter.com/arianc3)
+- Arian Acosta [Twitter](https://twitter.com/arian3k)
 
 Spread the ❤️ about Poetic
 
