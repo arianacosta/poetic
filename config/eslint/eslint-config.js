@@ -31,6 +31,21 @@ module.exports = {
   },
   rules: {
     quotes: ["warn", "single", { "allowTemplateLiterals": true }],
-    "no-unexpected-multiline": "error", // https://medium.com/@eugenkiss/dont-use-semicolons-in-typescript-474ccfe4bdb3
+    "no-unexpected-multiline": "error", // https://bit.ly/2kMIX99
   },
+  overrides: [
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off", // covered by no-unused-vars
+        "@typescript-eslint/explicit-function-return-type": "off" // https://bit.ly/2kkud12
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": ["error"] // https://bit.ly/2kkud12
+      }
+    }
+  ]
 };

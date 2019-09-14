@@ -1,7 +1,7 @@
-const { prettierrc } = require("poetic");
+const { prettierConfig } = require("poetic");
 
 module.exports = {
-  ...prettierrc
+  ...prettierConfig,
   // Add custom rules here
   // printWidth: 100,
 };
