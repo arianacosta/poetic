@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Lerna" src="https://user-images.githubusercontent.com/13475001/64478843-6dcfde00-d17c-11e9-98a5-a2eabdc40c1c.png" width="200">
+  <img alt="Poetic" src="https://user-images.githubusercontent.com/13475001/64478843-6dcfde00-d17c-11e9-98a5-a2eabdc40c1c.png" width="200">
 </p>
 
 <p align="center">
