@@ -8,7 +8,7 @@ const currentDir = process.cwd();
 const sourceRootDir = path.join(__dirname, "..");
 
 const resetChanges = () => {
-  console.log('♻️ Reverting changes...');
+  console.log('♻️  Reverting changes...');
   cp.execSync('git reset --hard && git clean -fd');
   process.exit(1);
 };
@@ -30,7 +30,7 @@ const installConfigurationFiles = () => {
     const source = path.join(sourceRootDir, 'boilerplate');
     fse.copySync(source, currentDir);
   } catch (e) {
-    throw Error('Coud not install configuration files: ', e);
+    throw Error(`Coud not install configuration files: ${e}`);
   }
 }
 
@@ -59,7 +59,7 @@ const updatePackageJson = () => {
 
     fse.writeJsonSync(packageJson, package, {spaces: 2});
   } catch (e) {
-    throw Error('Could not update package.json: ', e);
+    throw Error(`Could not update package.json: ${e}`);
   }
 }
 
@@ -68,7 +68,7 @@ const installPackages = () => {
       console.log('🍉 Installing packages ...');
       cp.execSync('yarn install');
     } catch (e) {
-      throw Error('Could not install packages: ', e);
+      throw Error(`Could not install packages.`);
     }
 }
 
@@ -81,6 +81,15 @@ const displaySuccessMessage = () => {
   console.log('   🔹 EditorConfig');
 }
 
+const displayErrorMessage = (error) => {
+  console.log('');
+  console.error(`🆘 ${error.message}`);
+  console.log('');
+  console.log('To get help with this problem, please submit an issue to: ');
+  console.log('https://github.com/arianacosta/poetic/issues');
+  console.log('');
+}
+
 (() => {
   try {
     setCheckpoint();
@@ -89,7 +98,7 @@ const displaySuccessMessage = () => {
     installPackages();
     displaySuccessMessage();
   } catch (e) {
-    console.error(e.message);
+    displayErrorMessage(e);
     resetChanges();
   }
 })();
