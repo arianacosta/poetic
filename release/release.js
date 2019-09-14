@@ -6,7 +6,7 @@ const cp = require("child_process");
 
 const currentDir = process.cwd();
 
-const updatePackageBoilerplateJson = () => {
+const matchBoilerplateVersion = () => {
     const packageJson = path.join(currentDir, "package.json");
     const packageBoilerplateJson = path.join(currentDir, 'bin/package.boilerplate.json');
     
@@ -18,4 +18,4 @@ const updatePackageBoilerplateJson = () => {
     fse.writeJsonSync(packageBoilerplateJson, packageBoilerplate, {spaces: 2});
   }
 
-  updatePackageBoilerplateJson();
+  matchBoilerplateVersion();

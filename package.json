@@ -9,6 +9,8 @@
   "author": "Arian Acosta (https://twitter.com/arian3k)",
   "license": "MIT",
   "scripts": {
+    "release": "yarn version && echo \"DONE!\"",
+    "postversion": "node release/release.js && git add . && git commit --amend",
     "upgrade:dependencies": "npx npm-check-updates"
   },
   "dependencies": {
