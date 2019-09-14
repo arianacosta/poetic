@@ -37,13 +37,14 @@ module.exports = {
     {
       "files": ["*.js", "*.jsx"],
       "rules": {
-        "@typescript-eslint/no-unused-vars": "off", // covered by no-unused-vars
+        "@typescript-eslint/no-unused-vars": "off", // duplicate of by no-unused-vars
         "@typescript-eslint/explicit-function-return-type": "off" // https://bit.ly/2kkud12
       }
     },
     {
       "files": ["*.ts", "*.tsx"],
       "rules": {
+        "no-unused-vars": "off", // duplicate of @typescript-eslint/no-unused-vars
         "@typescript-eslint/explicit-function-return-type": ["error"] // https://bit.ly/2kkud12
       }
     }
