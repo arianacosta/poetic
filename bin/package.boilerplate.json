@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "poetic": "^1.0.3"
+    "poetic": "^1.0.4"
   },
   "scripts": {
     "code:clean": "yarn code:lint && yarn code:format",

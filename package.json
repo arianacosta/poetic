@@ -1,6 +1,6 @@
 {
   "name": "poetic",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Automatically install and maintain your code style with linters and formatters for JavaScript, TypeScript and React.",
   "main": "config/index.js",
   "bin": "bin/install-boilerplate.js",
@@ -9,8 +9,7 @@
   "author": "Arian Acosta (https://twitter.com/arian3k)",
   "license": "MIT",
   "scripts": {
-    "release": "yarn version && echo \"DONE!\"",
-    "postversion": "node release/release.js && git add . && git commit --amend",
+    "prepublish": "node release/release.js",
     "upgrade:dependencies": "npx npm-check-updates"
   },
   "dependencies": {

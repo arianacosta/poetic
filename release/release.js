@@ -2,20 +2,22 @@
 
 const fse = require("fs-extra");
 const path = require("path");
-const cp = require("child_process");
 
-const currentDir = process.cwd();
+const rootDir = process.cwd();
 
 const matchBoilerplateVersion = () => {
-    const packageJson = path.join(currentDir, "package.json");
-    const packageBoilerplateJson = path.join(currentDir, 'bin/package.boilerplate.json');
+    const packageJson = path.join(rootDir, "package.json");
+    const packageBoilerplateJson = path.join(rootDir, 'bin/package.boilerplate.json');
     
     const package = fse.readJsonSync(packageJson);
     const packageBoilerplate = fse.readJsonSync(packageBoilerplateJson);
 
-    packageBoilerplate.devDependencies.poetic = `^${package.version}`;
+    const newVersion = `^${package.version}`;
+    packageBoilerplate.devDependencies.poetic = newVersion;
   
     fse.writeJsonSync(packageBoilerplateJson, packageBoilerplate, {spaces: 2});
+
+    console.log(`Matched boilerplate version to: ${newVersion}`);
   }
 
   matchBoilerplateVersion();
