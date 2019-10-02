@@ -1,6 +1,6 @@
 {
   "name": "poetic",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Automatically install and maintain your code style with linters and formatters for JavaScript, TypeScript and React.",
   "main": "config/index.js",
   "bin": "bin/install-boilerplate.js",
@@ -13,15 +13,15 @@
     "upgrade:dependencies": "npx npm-check-updates"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.2.0",
-    "@typescript-eslint/parser": "^2.2.0",
-    "eslint": "^6.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.2",
+    "@typescript-eslint/parser": "^2.3.2",
+    "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.15.1",
     "eslint-plugin-react-hooks": "^1.7.0",
     "fs-extra": "^8.1.0",
     "prettier": "^1.18.2",

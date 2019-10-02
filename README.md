@@ -14,7 +14,7 @@
 Poetic installs and maintains ESLint, Prettier, EditorConfig and Airbnb rules for JavaScript, TypeScript and React.
 
 <p align="center">
-  <img alt="Poetic installation example" src="https://user-images.githubusercontent.com/13475001/64479604-7bd72c00-d187-11e9-983a-a5fe0f7a9ec3.gif" 
+  <img alt="Poetic installation example" src="https://user-images.githubusercontent.com/13475001/66051447-f4b67300-e4fc-11e9-82d0-4e23fab9d7d0.gif" 
   width="600"
   >
 </p>
