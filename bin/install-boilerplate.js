@@ -66,7 +66,11 @@ const updatePackageJson = () => {
 const installPackages = () => {
     try {
       console.log('🍉 Installing packages ...');
-      cp.execSync('yarn install');
+      if (fse.existsSync('yarn.lock')) {
+        cp.execSync('yarn install');
+      } else {
+        cp.execSync('npm install');
+      }
     } catch (e) {
       throw Error(`Could not install packages.`);
     }
