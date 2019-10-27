@@ -7,13 +7,13 @@ module.exports = {
     "airbnb/hooks",
     "prettier",
     "prettier/@typescript-eslint",
-    "prettier/react"
+    "prettier/react",
   ],
   parserOptions: {
     ecmaVersion: 9,
     sourceType: "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
     },
   },
   settings: {
@@ -27,7 +27,7 @@ module.exports = {
   env: {
     "browser": true,
     "node": true,
-    "jest": true
+    "jest": true,
   },
   rules: {
     quotes: ["warn", "single", { "allowTemplateLiterals": true }],
@@ -35,17 +35,23 @@ module.exports = {
   },
   overrides: [
     {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "warn", // https://github.com/airbnb/javascript#modules--use-them
+      }
+    },
+    {
       "files": ["*.js", "*.jsx"],
       "rules": {
         "@typescript-eslint/no-unused-vars": "off", // duplicate of by no-unused-vars
-        "@typescript-eslint/explicit-function-return-type": "off" // https://bit.ly/2kkud12
+        "@typescript-eslint/explicit-function-return-type": "off", // https://bit.ly/2kkud12
       }
     },
     {
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "no-unused-vars": "off", // duplicate of @typescript-eslint/no-unused-vars
-        "@typescript-eslint/explicit-function-return-type": ["error"] // https://bit.ly/2kkud12
+        "@typescript-eslint/explicit-function-return-type": ["error"], // https://bit.ly/2kkud12
       }
     }
   ]
