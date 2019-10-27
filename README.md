@@ -47,7 +47,7 @@ Keeping the code clean and organized is important to prevent bugs and to collabo
 
 - Javascript (`.js`)
 - TypeScript (`.ts`)
-- React (`.js`,`.jsx`)
+- React (`.jsx`,`.tsx`)
 
 ```
 your-app/
