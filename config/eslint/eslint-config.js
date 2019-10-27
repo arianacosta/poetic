@@ -31,7 +31,8 @@ module.exports = {
   },
   rules: {
     quotes: ["warn", "single", { "allowTemplateLiterals": true }],
-    "no-unexpected-multiline": "error", // https://bit.ly/2kMIX99
+    "no-unexpected-multiline": "error", // https://bit.ly/2kMIX99,
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
   },
   overrides: [
     {
