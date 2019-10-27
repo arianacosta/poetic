@@ -1,6 +1,6 @@
 {
   "name": "poetic",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Automatically install and maintain your code style with linters and formatters for JavaScript, TypeScript and React.",
   "main": "config/index.js",
   "bin": "bin/install-boilerplate.js",
