@@ -1,10 +1,9 @@
 {
   "devDependencies": {
-    "poetic": "^1.0.5",
-    "yarpm": "^0.2.1"
+    "poetic": "^1.0.5"
   },
   "scripts": {
-    "code:clean": "yarpm code:lint && yarpm code:format",
+    "code:clean": "${manager} code:lint && ${manager} code:format",
     "code:lint": "eslint --ext .js,.jsx,.ts,.tsx \"src/\" --fix",
     "code:format": "prettier './src/**/**.{js,jsx,ts,tsx}' --write",
     "code:check:rules": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
