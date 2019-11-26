@@ -37,6 +37,10 @@ npx poetic
 - Easy to maintain with a **single dependency**
 - Configures **Visual Studio Code**
 
+## Requirements
+
+- Yarn (There are some [limitations with NPM](https://github.com/arianacosta/poetic/issues/28) that make it incompatible with ESLint as a subdependency)
+
 ### Motivation
 
 Keeping the code clean and organized is important to prevent bugs and to collaborate with others. Linters help identify possible errors and bad practices and formatters allow us to concentrate on the features without having to worry about the code format. Unfortunately, configuring and maintaining these tools is cumbersome and more often than not, the project ends up with incorrect configurations (if any at all).
