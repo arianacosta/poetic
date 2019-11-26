@@ -9,7 +9,8 @@
   "author": "Arian Acosta (https://twitter.com/arian3k)",
   "license": "MIT",
   "scripts": {
-    "prepublish": "node release/release.js",
+    "develop": "node scripts/develop.js",
+    "prepublish": "node scripts/release.js",
     "upgrade:dependencies": "npx npm-check-updates -u"
   },
   "dependencies": {
