@@ -34,9 +34,9 @@ const installConfigurationFiles = () => {
   }
 }
 
-const updatePackageJsonDevDependencies = () => {
+const updatePackageJson = () => {
   try {
-    console.log('🥝 Updating package.json devDependencies ...');
+    console.log('🥝 Updating package.json ...');
 
     const packageJson = path.join(currentDir, "package.json");
 
@@ -46,6 +46,11 @@ const updatePackageJsonDevDependencies = () => {
 
     const package = fse.readJsonSync(packageJson);
     const packageScripts = fse.readJsonSync(path.join(sourceRootDir, 'bin/package.boilerplate.json'));
+
+    package.scripts = {
+      ...package.scripts,
+      ...packageScripts.scripts,
+    };
 
     package.devDependencies = {
       ...package.devDependencies,
@@ -61,43 +66,10 @@ const updatePackageJsonDevDependencies = () => {
 const installPackages = () => {
     try {
       console.log('🍉 Installing packages ...');
-      try {
-        cp.execSync('yarn install');
-        return 'yarn'
-      } catch (e) {
-        process.stdout.moveCursor(0, -1)
-        process.stdout.clearLine(0)
-        cp.execSync('npm install');
-        return 'npm'
-      }
+      cp.execSync('yarn install');
     } catch (e) {
       throw Error(`Could not install packages.`);
     }
-}
-
-const updatePackageJsonScripts = (manager) => {
-  try {
-    console.log('🥝 Updating package.json scripts ...');
-
-    const packageJson = path.join(currentDir, "package.json");
-
-    if (!fse.existsSync(packageJson)) {
-      throw Error ('package.json not found in the current directory.')
-    }
-
-    const package = fse.readJsonSync(packageJson);
-    const packageScriptsRaw = fse.readFileSync(path.join(sourceRootDir, 'bin/package.boilerplate.json'), { encoding: 'utf8' })
-    const packageScripts = JSON.parse(packageScriptsRaw.replace(/\$\{manager\}/g, manager));
-
-    package.scripts = {
-      ...package.scripts,
-      ...packageScripts.scripts,
-    };
-
-    fse.writeJsonSync(packageJson, package, {spaces: 2});
-  } catch (e) {
-    throw Error(`Could not update package.json: ${e}`);
-  }
 }
 
 const displaySuccessMessage = () => {
@@ -122,9 +94,8 @@ const displayErrorMessage = (error) => {
   try {
     setCheckpoint();
     installConfigurationFiles();
-    updatePackageJsonDevDependencies();
-    const manager = installPackages();
-    updatePackageJsonScripts(manager);
+    updatePackageJson();
+    installPackages();
     displaySuccessMessage();
   } catch (e) {
     displayErrorMessage(e);
