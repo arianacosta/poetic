@@ -109,5 +109,6 @@ module.exports = {
   writerOpts: { transform: customTransform },
   plugins,
   branch: "oleg-koval/ci/add-semantic-release-workflow",
-  ci: false
+  ci: false,
+  dryRun: true
 };
