@@ -67,7 +67,6 @@
   },
   "scripts": {
     "cz": "git-cz",
-    "cz:retry": "git-cz --retry",
     "develop": "node scripts/develop.js",
     "upgrade:dependencies": "npx npm-check-updates -u"
   },
