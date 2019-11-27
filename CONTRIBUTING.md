@@ -65,8 +65,6 @@ git commit -m "feat(provider): add new XYZ provider for API"
 git commit -m "chore: cleanup unused files"
 ```
 
-closes #11
-
 ### Streamline Installation/Uninstallation
 
 In your test project you may add the following scripts to simplify the iterative process of installing/uninstalling:
