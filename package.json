@@ -1,6 +1,11 @@
 {
   "author": "Arian Acosta (https://twitter.com/arian3k)",
   "bin": "bin/install-boilerplate.js",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
@@ -18,15 +23,26 @@
   },
   "description": "Automatically install and maintain your code style with linters and formatters for JavaScript, TypeScript and React.",
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "@semantic-release/commit-analyzer": "^6.3.3",
     "@semantic-release/git": "^7.0.18",
     "@semantic-release/github": "^5.5.5",
     "@semantic-release/npm": "^5.3.4",
     "@semantic-release/release-notes-generator": "^7.3.2",
+    "commitizen": "^4.0.3",
+    "husky": "^4.0.0-beta.5",
+    "lint-staged": "^9.4.3",
     "semantic-release": "^15.13.30",
-    "semantic-release-npm-github-publish": "^1.3.7"
+    "semantic-release-npm-github-publish": "^1.4.0"
   },
   "homepage": "https://github.com/arianacosta/poetic",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
   "keywords": [
     "poetic",
     "style",
@@ -40,6 +56,9 @@
     "airbnb"
   ],
   "license": "MIT",
+  "lint-staged": {
+    "extends": []
+  },
   "main": "config/index.js",
   "name": "poetic",
   "private": false,
@@ -52,8 +71,9 @@
     "url": "git+https://github.com/oleg-koval/poetic.git"
   },
   "scripts": {
+    "cz": "git-cz",
+    "cz:retry": "git-cz --retry",
     "develop": "node scripts/develop.js",
-    "prepublish": "node scripts/release.js",
     "upgrade:dependencies": "npx npm-check-updates -u"
   },
   "version": "1.1.0"
