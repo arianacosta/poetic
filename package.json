@@ -25,11 +25,6 @@
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
-    "@semantic-release/commit-analyzer": "^6.3.3",
-    "@semantic-release/git": "^7.0.18",
-    "@semantic-release/github": "^5.5.5",
-    "@semantic-release/npm": "^5.3.4",
-    "@semantic-release/release-notes-generator": "^7.3.2",
     "commitizen": "^4.0.3",
     "husky": "^4.0.0-beta.5",
     "lint-staged": "^9.4.3",
