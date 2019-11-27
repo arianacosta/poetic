@@ -63,7 +63,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oleg-koval/poetic.git"
+    "url": "git+https://github.com/arianacosta/poetic.git"
   },
   "scripts": {
     "cz": "git-cz",
