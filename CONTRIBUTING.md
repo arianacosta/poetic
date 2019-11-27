@@ -41,7 +41,7 @@ Subject line contains succinct description of the change.
 
 - feat (feature)
 - fix (bug fix)
--docs (documentation)
+- docs (documentation)
 - style (formatting, missing semi colons, …)
 - refactor
 - test (when adding missing tests)
