@@ -3,9 +3,12 @@
 const fse = require("fs-extra");
 const path = require("path");
 const cp = require("child_process");
+const argv = require('yargs').argv
 
 const currentDir = process.cwd();
 const sourceRootDir = path.join(__dirname, "..");
+
+const isInLocalMode = argv.local;
 
 const resetChanges = () => {
   console.log('♻️  Reverting changes...');
@@ -66,7 +69,8 @@ const updatePackageJson = () => {
 const installPackages = () => {
     try {
       console.log('🍉 Installing packages ...');
-      cp.execSync('yarn install');
+      const source = isInLocalMode ? '../poetic' : 'poetic'
+      cp.execSync(`yarn add ${source} --dev`);
     } catch (e) {
       throw Error(`Could not install packages.`);
     }
