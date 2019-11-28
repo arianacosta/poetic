@@ -1,6 +1,6 @@
 {
   "author": "Arian Acosta (https://twitter.com/arian3k)",
-  "bin": "bin/install-boilerplate.js",
+  "bin": "bin/install.js",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
@@ -29,7 +29,8 @@
     "husky": "^4.0.0-beta.5",
     "lint-staged": "^9.4.3",
     "semantic-release": "^15.13.30",
-    "semantic-release-npm-github-publish": "^1.4.0"
+    "semantic-release-npm-github-publish": "^1.4.0",
+    "yargs": "^15.0.2"
   },
   "homepage": "https://github.com/arianacosta/poetic",
   "husky": {

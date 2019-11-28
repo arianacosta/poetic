@@ -26,7 +26,7 @@ directory/
 2. Go to poetic `cd poetic`
 3. Run `yarn develop` to configure the boilerplate to local development
 4. Go to the test project `cd ../your_test_project`
-5. Install the local Poetic `npx ../poetic`
+5. Install the local Poetic `npx ../poetic --local`
 
 ## Releasing
 
@@ -71,7 +71,7 @@ In your test project you may add the following scripts to simplify the iterative
 
 ```json
   "scripts": {
-    "poetic:add": "npx ../poetic",
+    "poetic:add": "npx ../poetic --local",
     "poetic:reset": "git reset --hard && git clean -fd",
   },
 ```

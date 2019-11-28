@@ -1,7 +1,4 @@
 {
-  "devDependencies": {
-    "poetic": "^1.1.0"
-  },
   "scripts": {
     "code:clean": "yarn code:lint && yarn code:format",
     "code:lint": "eslint --ext .js,.jsx,.ts,.tsx \"src/\" --fix",
