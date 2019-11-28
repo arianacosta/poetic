@@ -31,6 +31,7 @@ jobs:
       - name: Release
         env:
           CI: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # https://github.com/arianacosta/poetic/issues/34
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_WORKAROUND }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
