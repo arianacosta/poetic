@@ -118,6 +118,8 @@ If you would like to submit a PR, these are some of the short-term goals, but fe
 - Add configs for Webstorm
 - Improve the documentation
 
+Visit the [CONTRIBUTING](https://github.com/arianacosta/poetic/blob/master/CONTRIBUTING.md) section for instructions on how to develop, test and release Poetic.
+
 #### Contacting Collaborators
 
 - Arian Acosta [Twitter](https://twitter.com/arian3k)

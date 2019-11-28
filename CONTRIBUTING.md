@@ -23,51 +23,12 @@ directory/
 ```
 
 1. Clone the Poetic repository next to your test project
-2. Go to poetic `cd poetic`
-3. Run `yarn develop` to configure the boilerplate to local development
-4. Go to the test project `cd ../your_test_project`
-5. Install the local Poetic `npx ../poetic --local`
+2. Go to the test project `cd your_test_project`
+3. Install the local Poetic `npx ../poetic --local`
 
-## Releasing
+### Adding/Removing Poetic
 
-A new NPM version of the package is published  automatically with [GitHub actions](https://github.com/features/actions) and [semantic-release](https://github.com/semantic-release/semantic-release). Release version will take a decision what version to release (patch, minor or major) based on commit keywords which need to conform to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/)
-
-Please follow the convention for commits:
-
-**Subject line**
-Subject line contains succinct description of the change.
-
-**Allowed type**
-
-- feat (feature)
-- fix (bug fix)
-- docs (documentation)
-- style (formatting, missing semi colons, …)
-- refactor
-- test (when adding missing tests)
-- chore (maintain)
-
-**Allowed scope**
-Scope could be anything specifying place of the commit change. For example $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, etc...
-
-**subject text**
-use imperative, present tense: “change” not “changed” nor “changes”
-don't capitalize first letter
-no dot (.) at the end
-Message body
-just as in use imperative, present tense: “change” not “changed” nor “changes”
-includes motivation for the change and contrasts with previous behavior
-
-examples of good commits:
-
-```shell
-git commit -m "feat(provider): add new XYZ provider for API"
-git commit -m "chore: cleanup unused files"
-```
-
-### Streamline Installation/Uninstallation
-
-In your test project you may add the following scripts to simplify the iterative process of installing/uninstalling:
+In your test project you may add the following scripts to simplify the iterative test process:
 
 ```json
   "scripts": {
@@ -75,3 +36,51 @@ In your test project you may add the following scripts to simplify the iterative
     "poetic:reset": "git reset --hard && git clean -fd",
   },
 ```
+
+## Releasing
+
+A new NPM version of the package is published  automatically with [GitHub Actions](https://github.com/features/actions) and [semantic-release](https://github.com/semantic-release/semantic-release). Release version will take a decision what version to release (patch, minor or major) based on commit keywords which need to conform to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/)
+
+Please follow the convention for commits:
+
+### Subject Line
+
+Subject line contains succinct description of the change using the following format:
+
+```
+<type>(<scope>): <subject text>
+```
+
+**Allowed Type**
+
+- feat (feature)
+- fix (bug fix)
+- docs (documentation)
+- style (formatting, missing semi colons, etc)
+- refactor
+- test (when adding tests cases)
+- chore (general maintainance)
+
+**Allowed Scope**
+
+Scope could be anything specifying place of the commit change. For example `installation`, `rules`, `config`, `eslint`, `prettier`, etc.
+
+**Subject text**
+
+- Use imperative, present tense: “change” not “changed” nor “changes”
+- Don't capitalize first letter
+- Do not add a dot `.` at the end
+
+### Message body (optional)
+
+- Use imperative, present tense: “change” not “changed” nor “changes”
+- Includes motivation for the change and contrasts with previous behavior
+
+Examples of good commits:
+
+```shell
+git commit -m "feat(rules): add rule to allow semi-colons"
+git commit -m "chore: clean up unused files"
+```
+
+
