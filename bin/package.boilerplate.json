@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "code:clean": "yarn code:lint && yarn code:format",
+    "code:clean": "yarn code:lint; yarn code:format",
     "code:lint": "eslint --ext .js,.jsx,.ts,.tsx \"src/\" --fix",
     "code:format": "prettier './src/**/**.{js,jsx,ts,tsx}' --write",
     "code:check:rules": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
