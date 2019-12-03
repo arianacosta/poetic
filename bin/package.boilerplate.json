@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "code:clean": "yarn code:lint && yarn code:format",
-    "code:lint": "eslint --ext .js,.jsx,.ts,.tsx \"src/\" --fix",
-    "code:format": "prettier './src/**/**.{js,jsx,ts,tsx}' --write",
+    "code:check": "yarn code:lint; yarn code:format --check",
+    "code:clean": "yarn code:lint --fix; yarn code:format --write",
+    "code:lint": "eslint --ext .js,.jsx,.ts,.tsx \"src/\"",
+    "code:format": "prettier './src/**/**.{js,jsx,ts,tsx}'",
     "code:check:rules": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   }
 }
