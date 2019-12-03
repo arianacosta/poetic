@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/arianacosta/poetic/compare/v1.2.0...v1.2.1) (2019-12-03)
+
+
+### Chores
+
+* improve default NPM scripts ([#38](https://github.com/arianacosta/poetic/issues/38)) ([45c1c26](https://github.com/arianacosta/poetic/commit/45c1c2672bc27c4ad3d771e5ee2d684a4a2d952f))
+
 # [1.2.0](https://github.com/arianacosta/poetic/compare/v1.1.0...v1.2.0) (2019-12-02)
 
 
