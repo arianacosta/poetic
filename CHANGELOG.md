@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/arianacosta/poetic/compare/v1.2.1...v1.2.2) (2019-12-09)
+
+
+### Bug Fixes
+
+* add missing rule for arrow function parenthesis ([5b1da1b](https://github.com/arianacosta/poetic/commit/5b1da1ba2656c33bd126f72f2e50bb17bc2d9313))
+
 ## [1.2.1](https://github.com/arianacosta/poetic/compare/v1.2.0...v1.2.1) (2019-12-03)
 
 
