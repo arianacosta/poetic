@@ -34,12 +34,13 @@ In your test project you may add the following scripts to simplify the iterative
   "scripts": {
     "poetic:add": "npx ../poetic --local",
     "poetic:reset": "git reset --hard && git clean -fd",
+    "poetic:print:eslint:config": "eslint --print-config path::String",
   },
 ```
 
 ## Releasing
 
-A new NPM version of the package is published  automatically with [GitHub Actions](https://github.com/features/actions) and [semantic-release](https://github.com/semantic-release/semantic-release). Release version will take a decision what version to release (patch, minor or major) based on commit keywords which need to conform to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/)
+A new NPM version of the package is published automatically with [GitHub Actions](https://github.com/features/actions) and [semantic-release](https://github.com/semantic-release/semantic-release). Release version will take a decision what version to release (patch, minor or major) based on commit keywords which need to conform to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/)
 
 Please follow the convention for commits:
 
@@ -82,5 +83,3 @@ Examples of good commits:
 git commit -m "feat(rules): add rule to allow semi-colons"
 git commit -m "chore: clean up unused files"
 ```
-
-
