@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/arianacosta/poetic/compare/v1.2.2...v1.2.3) (2019-12-09)
+
+
+### Chores
+
+* clean rules and docs ([0e211ca](https://github.com/arianacosta/poetic/commit/0e211ca37fdb3d5b1868bb8a9013f76b56e1cc50))
+
 ## [1.2.2](https://github.com/arianacosta/poetic/compare/v1.2.1...v1.2.2) (2019-12-09)
 
 
