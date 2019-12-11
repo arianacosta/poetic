@@ -19,7 +19,8 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "fs-extra": "^8.1.0",
     "prettier": "^1.19.1",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.2",
+    "yargs": "^15.0.2"
   },
   "description": "Automatically install and maintain your code style with linters and formatters for JavaScript, TypeScript and React.",
   "devDependencies": {
@@ -29,8 +30,7 @@
     "husky": "^4.0.0-beta.5",
     "lint-staged": "^9.4.3",
     "semantic-release": "^15.13.30",
-    "semantic-release-npm-github-publish": "^1.4.0",
-    "yargs": "^15.0.2"
+    "semantic-release-npm-github-publish": "^1.4.0"
   },
   "homepage": "https://github.com/arianacosta/poetic",
   "husky": {
