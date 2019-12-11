@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/arianacosta/poetic/compare/v1.2.3...v1.2.4) (2019-12-11)
+
+
+### Bug Fixes
+
+* fix yargs not found when installing ([dc52343](https://github.com/arianacosta/poetic/commit/dc52343cd12558e4b1176acf71948c2ff72dd771)), closes [#40](https://github.com/arianacosta/poetic/issues/40)
+
 ## [1.2.3](https://github.com/arianacosta/poetic/compare/v1.2.2...v1.2.3) (2019-12-09)
 
 
