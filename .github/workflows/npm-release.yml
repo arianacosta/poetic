@@ -7,27 +7,26 @@ on:
 
 jobs:
   release:
-    name: Release to NPM and github
+    name: Release to NPM and Github
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
+        uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Cache dependencies
-        uses: actions/cache@v1
+      - name: Get Yarn cache directory
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v1
         with:
-          key: npm-${{ hashFiles(format('{0}{1}', github.workspace,
-            '/package-lock.json')) }}
-          path: ~/.npm
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            npm-
+            ${{ runner.os }}-yarn-
       - name: Install dependencies
-        run: npm ci --ignore-scripts --no-audit --prefer-offline --progress=false
+        run: yarn install --frozen-lockfile --ignore-scripts
       - name: Release
         env:
           CI: true
