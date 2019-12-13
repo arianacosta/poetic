@@ -1,3 +1,25 @@
+## [1.2.5](https://github.com/arianacosta/poetic/compare/v1.2.4...v1.2.5) (2019-12-13)
+
+
+### Chores
+
+* upgrade dependencies ([bfb75e2](https://github.com/arianacosta/poetic/commit/bfb75e21afcfa14953dbbab682d7079dcf864202))
+
+
+### Continuous Integration
+
+* add manual release trigger ([410a8d8](https://github.com/arianacosta/poetic/commit/410a8d895fef35a640de0b4bcd3d5f4bc19977b0))
+* add repository dispatch action ([f939d13](https://github.com/arianacosta/poetic/commit/f939d13a04c14a0288998857eb7008849e6b5a12))
+* fix dispatch syntax error ([4cf38b3](https://github.com/arianacosta/poetic/commit/4cf38b35d94174b229bf28d7efee4dfe60a5c62b))
+* ignore scripts ([dc95f76](https://github.com/arianacosta/poetic/commit/dc95f76dcaeef3c17d9ac85453f4caa61c1f7e0e))
+* remove release trigger ([53e03be](https://github.com/arianacosta/poetic/commit/53e03be43469b3719ff44180efa60cc18f700c6d))
+* reset pipeline changes ([e89fb46](https://github.com/arianacosta/poetic/commit/e89fb46a81cc8e503adf6feec2934c90048269d0))
+* run release jobs only on release branch ([3b2ec2d](https://github.com/arianacosta/poetic/commit/3b2ec2dded6abaadbdb9dab01b1f06aaa996c68d))
+* test installation with npm ([8195f72](https://github.com/arianacosta/poetic/commit/8195f72c412a9bbdfc20426ac64009dd78b50338))
+* test pipeline with npm ([f7fed39](https://github.com/arianacosta/poetic/commit/f7fed3983b6082728e732bbb2d1cd153a5fd6249))
+* test with checkout v1 ([1f45f4a](https://github.com/arianacosta/poetic/commit/1f45f4addad73c6daa6ee5af29037ad26ad46216))
+* use yarn for semantic release ([fdd7123](https://github.com/arianacosta/poetic/commit/fdd71232fedb7be50c1d4f06f44ab9e3dda1f052))
+
 ## [1.2.4](https://github.com/arianacosta/poetic/compare/v1.2.3...v1.2.4) (2019-12-11)
 
 
