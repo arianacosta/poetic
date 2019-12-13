@@ -1,0 +1,17 @@
+name: Trigger Release
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  trigger-release:
+    name: Trigger Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN_WORKAROUND }}
+          event-type: semantic-release
