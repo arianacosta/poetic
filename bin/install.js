@@ -9,6 +9,8 @@ const currentDir = process.cwd();
 const sourceRootDir = path.join(__dirname, "..");
 
 const isInLocalMode = argv.local;
+const keepRules = argv.keeprules;
+
 
 const resetChanges = () => {
   console.log('♻️  Reverting changes...');
@@ -31,7 +33,29 @@ const installConfigurationFiles = () => {
   try {
     console.log('🍊 Installing configuration files ...');
     const source = path.join(sourceRootDir, 'boilerplate');
-    fse.copySync(source, currentDir);
+    console.log('🍉 Retaining existing rules ...');
+    if (keepRules === "true") {
+      const files = [
+        ".vscode/settings.json",
+        ".editorconfig",
+        ".eslintignore",
+        ".eslintrc.js",
+        ".prettierrc.js"
+      ];
+      const existingFiles = files.filter(file => {
+        if (fse.existsSync(path.join(currentDir, file))) {
+          return file;
+        }
+      });
+      const temp = fse.mkdtempSync("temp");
+      existingFiles.forEach(file => {
+        fse.copySync(path.join(currentDir, file), path.join(temp, file));
+      });
+      fse.copySync(temp, currentDir);
+      fse.removeSync(temp);
+    } else {
+      fse.copySync(source, currentDir);
+    };
   } catch (e) {
     throw Error(`Coud not install configuration files: ${e}`);
   }
