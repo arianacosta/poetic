@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/arianacosta/poetic/compare/v1.2.5...v1.2.6) (2019-12-13)
+
+
+### Chores
+
+* trigger release manually ([caacaa3](https://github.com/arianacosta/poetic/commit/caacaa304e31ca849ad87a35bc51a0844f3ef128))
+
 ## [1.2.5](https://github.com/arianacosta/poetic/compare/v1.2.4...v1.2.5) (2019-12-13)
 
 
