@@ -1,9 +1,8 @@
-name: Release to NPM
+name: Semantic Release
 
 on:
-  push:
-    branches:
-      - release
+  repository_dispatch:
+    types: [semantic-release]
 
 jobs:
   release:
