@@ -1,8 +1,9 @@
 name: Semantic Release
 
 on:
-  repository_dispatch:
-    types: [semantic-release]
+  push:
+    branches:
+      - master
 
 jobs:
   release:
