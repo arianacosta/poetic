@@ -10,5 +10,9 @@ jobs:
     name: Trigger Release
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch Github Event
-        run: "curl -v -H \"Accept: application/vnd.github.everest-preview+json\" -H \"Authorization: token ${GITHUB_TOKEN_WORKAROUND}\" https://api.github.com/repos/arianacosta/poetic/dispatches -d '{ \"event_type\": \"semantic-release\" }'"
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN_WORKAROUND }}
+          event-type: semantic-release
+    
