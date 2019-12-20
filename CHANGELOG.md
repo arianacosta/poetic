@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/arianacosta/poetic/compare/v1.2.6...v1.3.0) (2019-12-20)
+
+
+### Bug Fixes
+
+* **rules:** fix eslint import rule ([#43](https://github.com/arianacosta/poetic/issues/43)) ([81a2bd5](https://github.com/arianacosta/poetic/commit/81a2bd5f7345e53ecbea56629c76b1263d1c4252))
+
+
+### Features
+
+* **install:** add option to keep existing rules ([#41](https://github.com/arianacosta/poetic/issues/41)) ([2c6a9ce](https://github.com/arianacosta/poetic/commit/2c6a9ced4e9eee43615fb5ebefab39be54166709))
+
 ## [1.2.6](https://github.com/arianacosta/poetic/compare/v1.2.5...v1.2.6) (2019-12-13)
 
 
