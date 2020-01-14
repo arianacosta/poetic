@@ -74,9 +74,10 @@ Poetic comes preconfigured to work with VSC, so that you can see the error indic
 
 Poetic provides a few handy NPM scripts that are useful for applying the code style from the command line:
 
-- `yarn code:clean` (Lints and formats)
-- `yarn code:lint` (Lint only)
-- `yarn code:format` (Format only)
+- `yarn code:check` : Checks linting and formatting (Useful for CI)
+- `yarn code:clean` : Applies linting and formatting (Useful for automatic fixes)
+- `yarn code:lint` : Applies linting only
+- `yarn code:format` : Applies formatting only
 
 > You may use these in conjunction with [Husky](https://github.com/typicode/husky) to clean the code automatically before committing or pushing.
 
