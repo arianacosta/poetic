@@ -47,6 +47,8 @@ Keeping the code clean and organized is important to prevent bugs and to collabo
 
 > The goal of Poetic is to simplify the setup and maintenance of code styling tools and rules while allowing full customization. 
 
+To learn more read the [Configuring Eslint, Prettier, and Airbnb in 1 Line](https://medium.com/javascript-in-plain-english/configuring-eslint-prettier-and-airbnb-in-1-line-164ab8f1e8c7).
+
 ## Supported File Types
 
 - Javascript (`.js`)
@@ -74,10 +76,10 @@ Poetic comes preconfigured to work with VSC, so that you can see the error indic
 
 Poetic provides a few handy NPM scripts that are useful for applying the code style from the command line:
 
-- `yarn code:check` : Checks linting and formatting (Useful for CI)
-- `yarn code:clean` : Applies linting and formatting (Useful for automatic fixes)
-- `yarn code:lint` : Applies linting only
-- `yarn code:format` : Applies formatting only
+- `yarn code:check` - Checks linting and formatting (Useful for CI)
+- `yarn code:clean` - Applies linting and formatting (Useful for automatic fixes)
+- `yarn code:lint` - Applies linting only
+- `yarn code:format` - Applies formatting only
 
 > You may use these in conjunction with [Husky](https://github.com/typicode/husky) to clean the code automatically before committing or pushing.
 
