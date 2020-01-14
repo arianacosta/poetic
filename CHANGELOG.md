@@ -1,3 +1,17 @@
+# [1.4.0](https://github.com/arianacosta/poetic/compare/v1.3.0...v1.4.0) (2020-01-14)
+
+
+### Documentation
+
+* update article links ([860dc92](https://github.com/arianacosta/poetic/commit/860dc928bd5ab544d27d23593044482d078a9cd8))
+* update available scripts ([2431b06](https://github.com/arianacosta/poetic/commit/2431b0639e89dd6acf08569ec09a68825642294d))
+
+
+### Features
+
+* upgrade dependencies ([591f454](https://github.com/arianacosta/poetic/commit/591f45410cd2aa6419c791750c2e49d8af805905))
+* **vscode:** upgrade vscode eslint autoFixOnSave to codeActionsOnSave ([#46](https://github.com/arianacosta/poetic/issues/46)) ([9c18fd0](https://github.com/arianacosta/poetic/commit/9c18fd0adba84a581dbeb77045e9ea4f536e3407))
+
 # [1.3.0](https://github.com/arianacosta/poetic/compare/v1.2.6...v1.3.0) (2019-12-20)
 
 
