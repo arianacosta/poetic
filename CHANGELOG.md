@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/arianacosta/poetic/compare/v1.4.0...v1.4.1) (2020-02-28)
+
+
+### Bug Fixes
+
+* **rules:** ignore ts declaration files ([#48](https://github.com/arianacosta/poetic/issues/48)) ([79413b7](https://github.com/arianacosta/poetic/commit/79413b740411bdcac6c416954dd952e39e72d9bb))
+
 # [1.4.0](https://github.com/arianacosta/poetic/compare/v1.3.0...v1.4.0) (2020-01-14)
 
 
