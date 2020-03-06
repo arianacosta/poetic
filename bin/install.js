@@ -22,7 +22,7 @@ const setCheckpoint = () => {
   const gitStatus = cp.execSync('git status --porcelain').toString();
 
   if (gitStatus.trim() !== '') {
-    console.error('🙈 There are uncommited changes. Please, commit before installing Poetic.');
+    console.error('🙈 There are uncommitted changes. Please, commit before installing Poetic.');
     process.exit(1);
   }
 
@@ -57,7 +57,7 @@ const installConfigurationFiles = () => {
       fse.copySync(source, currentDir);
     };
   } catch (e) {
-    throw Error(`Coud not install configuration files: ${e}`);
+    throw Error(`Could not install configuration files: ${e}`);
   }
 }
 
