@@ -1,3 +1,21 @@
+# [1.5.0](https://github.com/arianacosta/poetic/compare/v1.4.1...v1.5.0) (2020-03-24)
+
+
+### Bug Fixes
+
+* rule conflicts with Prettier ([#53](https://github.com/arianacosta/poetic/issues/53)) ([43de6f8](https://github.com/arianacosta/poetic/commit/43de6f89f6675cee7970c31d037187ba4f0bef3d))
+
+
+### Features
+
+* upgrade dependencies ([80973b1](https://github.com/arianacosta/poetic/commit/80973b1dd28035c8d4a41674a6a720b768cf2a83))
+
+
+### Miscellaneous
+
+* Fix typo (#51) ([e3d7cda](https://github.com/arianacosta/poetic/commit/e3d7cda9d39ee8c6e7d46914ebbf4ae1491d05f6)), closes [#51](https://github.com/arianacosta/poetic/issues/51)
+* drop default prettier options (#50) ([f73487d](https://github.com/arianacosta/poetic/commit/f73487d4f312e2172cf87f0538e382bf91043abe)), closes [#50](https://github.com/arianacosta/poetic/issues/50)
+
 ## [1.4.1](https://github.com/arianacosta/poetic/compare/v1.4.0...v1.4.1) (2020-02-28)
 
 
