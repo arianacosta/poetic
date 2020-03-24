@@ -30,10 +30,10 @@ module.exports = {
     jest: true
   },
   rules: {
-    quotes: ["warn", "single", { allowTemplateLiterals: true }],
-    "no-unexpected-multiline": "error", // https://medium.com/@eugenkiss/dont-use-semicolons-in-typescript-474ccfe4bdb3,
+    quotes: ["off"], // https://github.com/prettier/eslint-config-prettier#quotes
+    "no-unexpected-multiline": "off", // https://github.com/prettier/eslint-config-prettier#no-unexpected-multiline,
+    "arrow-parens": ["off"], // handled by prettier with rule 'arrowParens'
     "react/jsx-filename-extension": [1, { extensions: [".jsx", ".tsx"] }], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-    "arrow-parens": ["warn", "always"], // handled by prettier with rule 'arrowParens'
     // https://github.com/benmosher/eslint-plugin-import/issues/1568
     "import/extensions": [
       "error",
