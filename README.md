@@ -99,11 +99,12 @@ Poetic provides a base configuration that can be easily extended or overridden. 
 
 ## Installing on a preconfigured project 
 
-It is strongly recommended to remove other versions of ESLint and Prettier prior to installing Poetic.
+If you want to re-install poetic and wish to keep your existing rules, you can pass '--keeprules=true' to poetic init command.
 
-If your project has custom rules or configurations, those can be easily copied over to the files added by Poetic. The filename convention is the same, so it should be straight forward.
-
-> Plese note that existing configuration files might be modified. Make sure to review all changes before committing.
+```
+npx poetic --keeprules=true
+```
+Else poetic will overwrite existing rules
 
 ## Contributing
 
