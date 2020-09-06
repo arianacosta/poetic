@@ -92,7 +92,7 @@ const updatePackageJson = () => {
 
 const installPackages = () => {
     try {
-      console.log('🍉 Installing packages ...');
+      console.log('🥭 Installing packages ...');
       const source = isInLocalMode ? '../poetic' : 'poetic'
       cp.execSync(`yarn add ${source} --dev`);
     } catch (e) {
