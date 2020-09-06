@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/arianacosta/poetic/compare/v1.5.0...v1.6.0) (2020-09-06)
+
+
+### Features
+
+* **dependencies:** upgrade to eslint 7 ([d74018f](https://github.com/arianacosta/poetic/commit/d74018fdd39c7a62a7e609fe227b18fdd6425373))
+
 # [1.5.0](https://github.com/arianacosta/poetic/compare/v1.4.1...v1.5.0) (2020-03-24)
 
 
