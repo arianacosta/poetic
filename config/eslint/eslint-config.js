@@ -65,7 +65,9 @@ module.exports = {
       rules: {
         "no-unused-vars": "off", // duplicate of @typescript-eslint/no-unused-vars
         "@typescript-eslint/explicit-function-return-type": ["error"] // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md#configuring-in-a-mixed-jsts-codebase
-      }
+        "@typescript-eslint/no-unused-vars": [
+        'error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true },
+      ], // match eslint-config-airbnb
     }
   ]
 };
