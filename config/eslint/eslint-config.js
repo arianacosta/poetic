@@ -36,6 +36,8 @@ module.exports = {
     "react/jsx-filename-extension": [1, { extensions: [".jsx", ".tsx"] }], // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
     "@typescript-eslint/explicit-function-return-type": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.0/packages/eslint-plugin/docs/rules/explicit-function-return-type.md#configuring-in-a-mixed-jsts-codebase
     "@typescript-eslint/explicit-module-boundary-types": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.0/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md#configuring-in-a-mixed-jsts-codebase
+    "no-use-before-define": "off", // https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.0/packages/eslint-plugin/docs/rules/no-use-before-define.md#how-to-use
+    "@typescript-eslint/no-use-before-define": ["error"], // https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.0/packages/eslint-plugin/docs/rules/no-use-before-define.md#how-to-use
     // https://github.com/benmosher/eslint-plugin-import/issues/1568
     "import/extensions": [
       "error",
@@ -59,14 +61,12 @@ module.exports = {
       files: ["*.js", "*.jsx"],
       rules: {
         "@typescript-eslint/no-unused-vars": "off", // duplicate of no-unused-vars
-        "@typescript-eslint/no-use-before-define": "off", // duplicate of no-use-before-define
       }
     },
     {
       files: ["*.ts", "*.tsx"],
       rules: {
         "no-unused-vars": "off", // duplicate of @typescript-eslint/no-unused-vars
-        "no-use-before-define": "off", // duplicate of @typescript-eslint/no-use-before-define
         "@typescript-eslint/explicit-function-return-type": ["error"], // https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.0/packages/eslint-plugin/docs/rules/explicit-function-return-type.md#configuring-in-a-mixed-jsts-codebase
         "@typescript-eslint/explicit-module-boundary-types": ["error"], // https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.0/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md#configuring-in-a-mixed-jsts-codebase
       }
