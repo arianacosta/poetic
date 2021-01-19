@@ -58,15 +58,17 @@ module.exports = {
     {
       files: ["*.js", "*.jsx"],
       rules: {
-        "@typescript-eslint/no-unused-vars": "off", // duplicate of by no-unused-vars
+        "@typescript-eslint/no-unused-vars": "off", // duplicate of no-unused-vars
+        "@typescript-eslint/no-use-before-define": "off", // duplicate of no-use-before-define
       }
     },
     {
       files: ["*.ts", "*.tsx"],
       rules: {
         "no-unused-vars": "off", // duplicate of @typescript-eslint/no-unused-vars
+        "no-use-before-define": "off", // duplicate of @typescript-eslint/no-use-before-define
         "@typescript-eslint/explicit-function-return-type": ["error"], // https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.0/packages/eslint-plugin/docs/rules/explicit-function-return-type.md#configuring-in-a-mixed-jsts-codebase
-        "@typescript-eslint/explicit-module-boundary-types": ["error"] // https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.0/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md#configuring-in-a-mixed-jsts-codebase
+        "@typescript-eslint/explicit-module-boundary-types": ["error"], // https://github.com/typescript-eslint/typescript-eslint/blob/v4.14.0/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md#configuring-in-a-mixed-jsts-codebase
       }
     }
   ]
