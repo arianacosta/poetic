@@ -27,6 +27,16 @@ On the root of your project run:
 npx poetic
 ```
 
+### CLI flags:
+<dl>
+  <dt>--keeprules=true</dt>
+  <dd>This will keep your current configuration files as is.</dd>
+  <dt>--local=true</dt>
+  <dd>Will install poetic from the local parent directory.</dd>
+  <dt>--skipinstall=true</dt>
+  <dd>Will skip installing poetic as a dependency.</dd>
+</dl>
+
 > Trying out Poetic is safe! You can review all the changes in Git before committing. If you don't like it, just discard it.
 
 ## Features
