@@ -29,8 +29,8 @@
     "commitizen": "^4.2.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.3.0",
-    "semantic-release": "^17.1.1",
-    "semantic-release-npm-github-publish": "^1.4.0"
+    "semantic-release": "^18.0.0",
+    "semantic-release-npm-github-publish": "^1.5.1"
   },
   "homepage": "https://github.com/arianacosta/poetic",
   "husky": {
