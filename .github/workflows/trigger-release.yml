@@ -13,5 +13,5 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN_WORKAROUND }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           event-type: semantic-release
