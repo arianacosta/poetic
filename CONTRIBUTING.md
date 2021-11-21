@@ -33,8 +33,7 @@ In your test project you may add the following scripts to simplify the iterative
 ```json
   "scripts": {
     "poetic:add": "npx ../poetic --local",
-    "poetic:reset": "git reset --hard && git clean -fd",
-    "poetic:print:eslint:config": "eslint --print-config path::String",
+    "poetic:reset": "git reset --hard && git clean -fd"
   },
 ```
 

@@ -6,8 +6,6 @@ module.exports = {
     "airbnb",
     "airbnb/hooks",
     "prettier",
-    "prettier/@typescript-eslint",
-    "prettier/react"
   ],
   parserOptions: {
     ecmaVersion: 9,

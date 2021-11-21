@@ -12,7 +12,6 @@ const isInLocalMode = argv.local;
 const keepRules = argv.keeprules;
 const skipInstall = argv.skipinstall;
 
-
 const resetChanges = () => {
   console.log('♻️  Reverting changes...');
   cp.execSync('git reset --hard && git clean -fd');
@@ -34,8 +33,9 @@ const installConfigurationFiles = () => {
   try {
     console.log('🍊 Installing configuration files ...');
     const source = path.join(sourceRootDir, 'boilerplate');
-    console.log('🍉 Retaining existing rules ...');
-    if (keepRules === "true") {
+    if (keepRules) {
+      console.log('🍉 Retaining existing rules ...');
+
       const files = [
         ".vscode/settings.json",
         ".editorconfig",
@@ -92,21 +92,24 @@ const updatePackageJson = () => {
 }
 
 const installPackages = () => {
-  if (skipInstall !== 'true') {
-    try {
-      console.log('🥭 Installing packages ...');
-      const source = isInLocalMode ? '../poetic' : 'poetic';
-      cp.execSync(`yarn add ${source} --dev`);
-    } catch (e) {
-      throw Error(`Could not install packages.`);
-    }
+  if(skipInstall) {
+    return;
   }
+  
+  try {
+    console.log('🥭 Installing packages ...');
+    const source = isInLocalMode ? '../poetic' : 'poetic';
+    cp.execSync(`yarn add ${source} --dev`);
+  } catch (e) {
+    throw Error(`Could not install packages.`);
+  }
+  
 }
 
 const displaySuccessMessage = () => {
   console.log('');
   console.log('💫 Poetic was installed successfully!');
-  console.log('   It is recommended to add these plugins to your IDE:');
+  console.log('   It is recommended to add these plugins to VSCode:');
   console.log('   🔹 ESLint');
   console.log('   🔹 Prettier');
   console.log('   🔹 EditorConfig');
