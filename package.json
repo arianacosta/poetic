@@ -22,6 +22,7 @@
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "husky": "^7.0.4",
+    "pinst": "^2.1.6",
     "semantic-release": "^18.0.0"
   },
   "homepage": "https://github.com/arianacosta/poetic",
@@ -52,7 +53,9 @@
   "scripts": {
     "develop": "node scripts/develop.js",
     "upgrade:dependencies": "npx npm-check-updates -u",
-    "prepare": "husky install"
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
   },
   "version": "1.6.0"
 }
