@@ -10,6 +10,7 @@ const sourceRootDir = path.join(__dirname, "..");
 
 const isInLocalMode = argv.local;
 const keepRules = argv.keeprules;
+const skipInstall = argv.skipinstall;
 
 
 const resetChanges = () => {
@@ -91,13 +92,15 @@ const updatePackageJson = () => {
 }
 
 const installPackages = () => {
+  if (skipInstall !== 'true') {
     try {
       console.log('🥭 Installing packages ...');
-      const source = isInLocalMode ? '../poetic' : 'poetic'
+      const source = isInLocalMode ? '../poetic' : 'poetic';
       cp.execSync(`yarn add ${source} --dev`);
     } catch (e) {
       throw Error(`Could not install packages.`);
     }
+  }
 }
 
 const displaySuccessMessage = () => {
