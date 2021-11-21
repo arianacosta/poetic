@@ -28,13 +28,14 @@ npx poetic
 ```
 
 ### CLI flags:
+
 <dl>
-  <dt>--keeprules=true</dt>
-  <dd>This will keep your current configuration files as is.</dd>
-  <dt>--local=true</dt>
-  <dd>Will install poetic from the local parent directory.</dd>
-  <dt>--skipinstall=true</dt>
-  <dd>Will skip installing poetic as a dependency.</dd>
+  <dt>--keeprules</dt>
+  <dd>Keeps your current rule configuration files as is.</dd>
+  <dt>--local</dt>
+  <dd>Installs poetic from the local parent directory (for contributing to Poetic)</dd>
+  <dt>--skipinstall</dt>
+  <dd>Skips installing Poetic as a dev dependency (useful for bundling Poetic as part of another package).</dd>
 </dl>
 
 > Trying out Poetic is safe! You can review all the changes in Git before committing. If you don't like it, just discard it.
@@ -55,7 +56,7 @@ npx poetic
 
 Keeping the code clean and organized is important to prevent bugs and to collaborate with others. Linters help identify possible errors and bad practices and formatters allow us to concentrate on the features without having to worry about the code format. Unfortunately, configuring and maintaining these tools is cumbersome and more often than not, the project ends up with incorrect configurations (if any at all).
 
-> The goal of Poetic is to simplify the setup and maintenance of code styling tools and rules while allowing full customization. 
+> The goal of Poetic is to simplify the setup and maintenance of code styling tools and rules while allowing full customization.
 
 To learn more read the [Configuring Eslint, Prettier, and Airbnb in 1 Line](https://medium.com/javascript-in-plain-english/configuring-eslint-prettier-and-airbnb-in-1-line-164ab8f1e8c7).
 
@@ -97,7 +98,7 @@ Poetic provides a few handy NPM scripts that are useful for applying the code st
 
 Poetic provides a base configuration that can be easily extended or overridden. It uses the native configurations you are familiar with, so that you can build your own rules on top of it. Feel free to edit the following files as you see fit:
 
-- ESLint: 
+- ESLint:
   - `.eslintrc.js` (Linting rules)
   - `.eslintignore` (Ignored files)
 - Prettier:
@@ -109,8 +110,7 @@ Poetic provides a base configuration that can be easily extended or overridden. 
 - Visual Studio Code:
   - `.vscode/settings.json` (IDE behavior)
 
-
-## Installing on a preconfigured project 
+## Installing on a preconfigured project
 
 It is strongly recommended to remove other versions of ESLint and Prettier prior to installing Poetic.
 
@@ -120,7 +120,7 @@ If your project has custom rules or configurations, those can be easily copied o
 
 ## Contributing
 
-We are looking for contributors that are passionate about code style and making it accessible to teams around the world. 
+We are looking for contributors that are passionate about code style and making it accessible to teams around the world.
 
 To make Poetic useful for everyone, we need to understand your needs, so please let us know about things that could help you improve your workflow.
 
@@ -138,5 +138,3 @@ Visit the [CONTRIBUTING](https://github.com/arianacosta/poetic/blob/master/CONTR
 - Arian Acosta [Twitter](https://twitter.com/arian3k)
 
 Spread the ❤️ about Poetic
-
-
