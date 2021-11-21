@@ -22,8 +22,7 @@
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "husky": "^7.0.4",
-    "semantic-release": "^18.0.0",
-    "semantic-release-npm-github-publish": "^1.5.1"
+    "semantic-release": "^18.0.0"
   },
   "homepage": "https://github.com/arianacosta/poetic",
   "keywords": [

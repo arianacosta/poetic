@@ -1,5 +1,0 @@
-branch: master
-dryRun: false
-debug: false
-ci: false
-extends: "semantic-release-npm-github-publish"
